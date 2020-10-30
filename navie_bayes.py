@@ -22,7 +22,7 @@ def as_review(dct):
 
 def make_Dictionary(train):
     all_words = []
-    for review in reviews:
+    for review in train:
         words = review.reviewText.split()
         all_words += words
     dictionary = Counter(all_words)
@@ -39,7 +39,7 @@ def extract_features(test, dictionary):
     features_matrix = np.zeros((len(test),3000))
     docID = 0
     for reivew in test:
-        words = review.reviewText.split()
+        words = test.reviewText.split()
         for word in words:
             wordID = 0
             for i,d in enumerate(dictionary):
