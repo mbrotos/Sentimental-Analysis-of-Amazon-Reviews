@@ -1,0 +1,7 @@
+perscison
+recall
+f1 score
+timing training
+predicting result
+
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html
