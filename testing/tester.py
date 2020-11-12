@@ -22,14 +22,15 @@ token = RegexpTokenizer(r'[a-zA-Z0-9]+')
 
 classifers = [
     (MultinomialNB(), 0, 'MultinomialNB'),
-    (GaussianNB(), 1, 'GaussianNB'),
+    (GaussianNB(), 0, 'GaussianNB'),
     (ComplementNB(), 0, 'ComplementNB'),
-    (make_pipeline(StandardScaler(), SVC(gamma='auto')), 1, 'SVM')
+    (make_pipeline(StandardScaler(), SVC(gamma='auto')), 0, 'SVM')
 ]
 
 variationOptions = {
     0 : variations.bagOfWordsAll,
-    1 : variations.tfidf
+    1 : variations.tfidf,
+    2 : variations.bagOfWordsAll_NEG
 }
 
 classiferOptions = {
@@ -37,7 +38,7 @@ classiferOptions = {
     1 : classifiers.denseFit
 }
 
-def testClassifers(data, vOption=0):
+def testClassifers(data, vOption=2):
     text_t = variationOptions[vOption](data, token) # Vectorizes data based on a variation option
     X_train, X_test, Y_train, Y_test = train_test_split(text_t, data['Rating'], test_size=0.25, random_state=5)
 

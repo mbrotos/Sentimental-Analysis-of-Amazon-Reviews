@@ -20,9 +20,54 @@ def tfidf(data, token):
     text_t2 = tfidf.fit_transform(data['Summary and Review'] )
     return text_t2
 
-# def bagOfWordsAll_NEG(data, token):
-#     x = " . ".join(x.split('.')).split()
-#     from nltk.sentiment.util import mark_negation
-#     x = mark_negation(x)
-#     x = " ".join(x)
-#     return x
+def bagOfWordsAll_NEG(data, token):
+    '''
+    Negation code from eisa using positive-words.txt and negative-words.txt
+    '''
+    sample = []
+    for i in range(len(data)):
+        temp = ''.join(data.iloc[i]['Summary and Review'].split('\n')).split()
+        temp = ''.join(data.iloc[i]['Summary and Review'].split('\n'))
+        temp = " . ".join(temp.split('.')).split()
+        sample.append(temp)
+
+    x = []
+    from nltk.sentiment.util import mark_negation
+    for i in range(len(sample)):
+        x.append(mark_negation(sample[i]))
+    for i in range(len(x)):
+        x[i] = list(value for value in x[i] if value != ".")
+
+    def readwords(filename):
+        f = open(filename, encoding = "ISO-8859-1")
+        words = [ line.rstrip() for line in f.readlines()]
+        f.close()
+        return words
+
+    positive = readwords('positive-words.txt')
+    negative = readwords('negative-words.txt')
+    negative = negative[36:]
+    positive = positive[36:]
+    count_neg_temp = 0
+    count_neg = []
+    x_copy = x.copy()
+    for i in range(len(x_copy)):
+        for j in range(len(x_copy[i])):
+            if "NEG" in x_copy[i][j]:
+                count_neg_temp+=1
+        count_neg.append(count_neg_temp)
+        count_neg_temp = 0
+
+    def intersection(lst1, lst2): 
+        return list(set(lst1) & set(lst2))
+
+    simple = []
+    counter = 0
+    for doc in sample:
+        tNeg = len(intersection(doc,negative))
+        tPos = len(intersection(doc,positive))
+        lenDoc = len(doc)
+        simple.append([tPos,tNeg + count_neg[counter],lenDoc])
+        counter += 1
+    return simple
+
