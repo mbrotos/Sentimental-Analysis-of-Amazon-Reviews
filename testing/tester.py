@@ -29,7 +29,7 @@ classifers = [
 variationOptions = {
     0 : variations.bagOfWordsAll,
     1 : variations.tfidf,
-    2 : variations.bagOfWordsAll_NEG
+    2 : variations.bagOfWordsAll_NEG_wFEQ
 }
 
 classiferOptions = {

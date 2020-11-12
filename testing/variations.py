@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from nltk.tokenize import RegexpTokenizer
 
 def bagOfWordsAll(data, token):
-    cvector = CountVectorizer(stop_words='english', ngram_range=(1,1), tokenizer=token.tokenize, max_features= 500)
+    cvector = CountVectorizer(stop_words='english', ngram_range=(1,1), tokenizer=token.tokenize)
     text_t = cvector.fit_transform(data['Summary and Review'])
     return text_t
 
@@ -20,10 +20,11 @@ def tfidf(data, token):
     text_t2 = tfidf.fit_transform(data['Summary and Review'] )
     return text_t2
 
-def bagOfWordsAll_NEG(data, token):
+def bagOfWordsAll_NEG_wFEQ(data, token):
     '''
     Negation code from eisa using positive-words.txt and negative-words.txt
     '''
+    mainData = bagOfWordsAll(data, token)
     sample = []
     for i in range(len(data)):
         temp = ''.join(data.iloc[i]['Summary and Review'].split('\n')).split()
@@ -69,5 +70,8 @@ def bagOfWordsAll_NEG(data, token):
         lenDoc = len(doc)
         simple.append([tPos,tNeg + count_neg[counter],lenDoc])
         counter += 1
-    return simple
+    mainData = mainData.toarray()
+    simple = simple
+    final = np.concatenate((mainData, simple), axis=1)
+    return final
 
