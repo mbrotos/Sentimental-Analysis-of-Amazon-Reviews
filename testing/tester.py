@@ -23,8 +23,7 @@ token = RegexpTokenizer(r'[a-zA-Z0-9]+')
 classifers = [
     (MultinomialNB(), 0, 'MultinomialNB'),
     (GaussianNB(), 0, 'GaussianNB'),
-    (ComplementNB(), 0, 'ComplementNB'),
-    (make_pipeline(StandardScaler(), SVC(gamma='auto')), 0, 'SVM')
+    (ComplementNB(), 0, 'ComplementNB')
 ]
 
 variationOptions = {
