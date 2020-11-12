@@ -59,5 +59,5 @@ def testClassifers(data, vOption=3):
         print('\n\n')
 
 if __name__ == "__main__":
-    for i in range(8):
+    for i in range(9):
         testClassifers(data = pd.read_csv('dataFrame.csv'), vOption=i) 
