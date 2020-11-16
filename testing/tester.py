@@ -28,7 +28,6 @@ classifers = [
 
 variationOptions = {
     0 : variations.tfidf,
-
     1 : variations.bow,    
     2 : variations.bow_freq,
     3 : variations.bow_stem,
@@ -59,5 +58,6 @@ def testClassifers(data, vOption=3):
         print('\n\n')
 
 if __name__ == "__main__":
+    data = pd.read_csv('dataFrame.csv')
     for i in range(9):
-        testClassifers(data = pd.read_csv('dataFrame.csv'), vOption=i) 
+        testClassifers(data, vOption=i) 
