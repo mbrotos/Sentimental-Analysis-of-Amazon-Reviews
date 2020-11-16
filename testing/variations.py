@@ -100,8 +100,10 @@ def bow_freq(data, token):
     mainData = bow(data, token)
     sample = []
     for i in range(len(data)):
-        temp = ''.join(data.iloc[i]['Summary and Review'].split('\n')).split()
-        temp = ''.join(data.iloc[i]['Summary and Review'].split('\n'))
+        if('\n' in data.iloc[i]['Summary and Review']):
+            temp = ''.join(data.iloc[i]['Summary and Review'].split('\n'))
+        else:
+            temp = data.iloc[i]['Summary and Review']
         temp = " . ".join(temp.split('.')).split()
         sample.append(temp)
 
@@ -144,7 +146,6 @@ def bow_freq(data, token):
         simple.append([tPos,tNeg + count_neg[counter],lenDoc])
         counter += 1
     mainData = mainData.toarray()
-    simple = simple
-    final = np.concatenate((mainData, simple), axis=1)
+    final = np.hstack((mainData, simple))
     return final
 
