@@ -10,6 +10,10 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
+
+from sklearn.svm import LinearSVC
+from sklearn.feature_selection import SelectFromModel
 
 
 import matplotlib.pyplot as plt
@@ -21,21 +25,15 @@ import classifiers
 token = RegexpTokenizer(r'[a-zA-Z0-9]+')
 
 classifers = [
-    (MultinomialNB(), 0, 'MultinomialNB'),
-    (ComplementNB(), 0, 'ComplementNB')
+    ((LinearSVC(max_iter=100000)),0,'SVM L1'),
+    (MultinomialNB(), 0, 'MultinomialNB')
 ]
 
 
 variationOptions = {
     0 : variations.tfidf,
-    1 : variations.bow,    
-    2 : variations.bow_freq,
-    3 : variations.bow_stem,
-    4 : variations.bow_stem_freq,
-    5 : variations.bow_filter,
-    6 : variations.bow_filter_freq,
-    7 : variations.bow_stem_filter,
-    8 : variations.bow_stem_filter_freq
+    1 : variations.bow,
+    2 : variations.bow_filter
 
 }
 
@@ -58,6 +56,6 @@ def testClassifers(data, vOption=3):
         print('\n\n')
 
 if __name__ == "__main__":
-    data = pd.read_csv('dataFrame.csv')
-    for i in range(9):
+    data = pd.read_csv('merged.csv')
+    for i in range(len(list(variationOptions.keys()))):
         testClassifers(data, vOption=i) 
