@@ -16,13 +16,15 @@ from nltk.sentiment.util import mark_negation
 """
 Helper Methods
 """
+
 def readwords(filename):
     f = open(filename, encoding="ISO-8859-1")
     words = [line.rstrip() for line in f.readlines()]
     f.close()
     return words
 
-def filter(data):
+
+def filterData(data):
     positive = readwords('positive-words.txt')
     negative = readwords('negative-words.txt')
     negative = negative[36:]
@@ -60,7 +62,8 @@ def filter(data):
     data['Summary and Review'] = sample
     return data
 
-def stemmer(data):
+
+def stemData(data):
     stm = []
     stemmer = PorterStemmer()
     for rev in data['Summary and Review']:
@@ -70,57 +73,68 @@ def stemmer(data):
     data['Summary and Review'] = stm
     return data
 
+
+def writeToFile(name, data):
+    # file1 = open(name, "w")
+    # file1.write(','.join(data))
+    # file1.close()
 """
 Variations
 """
 
-def tfidf(data, token):
+
+def tfidf(data, token, fileName = "tfidf.txt"):
     tfidf = TfidfVectorizer(stop_words='english', min_df=50, tokenizer=token)
-    text_t2 = tfidf.fit_transform(data['Summary and Review'] )
+    text_t2 = tfidf.fit_transform(data['Summary and Review'])
+    writeToFile(fileName, tfidf.get_feature_names())
     return text_t2
 
-def bow(data, token):
-    cvector = CountVectorizer(stop_words='english', ngram_range=(1,1), tokenizer=token)
+
+def bow(data, token, fileName = "bow.txt"):
+    cvector = CountVectorizer(stop_words='english', ngram_range=(1, 1), tokenizer=token)
     text_t = cvector.fit_transform(data['Summary and Review'])
+    writeToFile(fileName, cvector.get_feature_names())
     return text_t
 
-def bow_filter(data, token):
-    data = filter(data)
-    return bow(data, token)
 
-def bow_stem(data, token):
-    data = stemmer(data)
-    return bow(data, token)
+# def bow_filter(data, token):
+#     data = filter(data)
+#     cvector = CountVectorizer(stop_words='english', ngram_range=(1, 1))
+#     text_t = cvector.fit_transform(data['Summary and Review'])
+#     return text_t
 
-def tfidf_filter(data, token):
-    data = filter(data)
-    return tfidf(data, token)
 
-def tfidf_stem(data, token):
-    data = stemmer(data)
-    return tfidf(data, token)
-    
-def bow_stem_filter(data, token):
-    data = filter(data)
-    data = stemmer(data)
-    return bow(data, token)
+# def bow_filter_freq(data, token):
+#     data = filter(data)
+#     return bow_freq(data, None)
 
-def tfidf_stem_filter(data, token):
-    data = filter(data)
-    data = stemmer(data)
-    return tfidf(data, token)
-"""
-    def bow_stem_freq(data, token):
-        data = stemmer(data)
-        return bow_freq(data, None)
-    def bow_filter_freq(data, token):
-        data = filter(data)
-        return bow_freq(data, None)
-    def bow_stem_filter_freq(data, token):
-        data = filter(data)
-        data = stemmer(data)
-        return bow_freq(data, None)
-"""  
+
+# def bow_stem(data, token):
+#     data = stemmer(data)
+#     cvector = CountVectorizer(stop_words='english', ngram_range=(1, 1))
+#     text_t = cvector.fit_transform(data['Summary and Review'])
+#     return text_t
+
+
+# def bow_stem_freq(data, token):
+#     data = stemmer(data)
+#     return bow_freq(data, None)
+
+
+# def bow_stem_filter(data, token):
+#     data = filter(data)
+#     data = stemmer(data)
+#     cvector = CountVectorizer(stop_words='english', ngram_range=(1, 1))
+#     text_t = cvector.fit_transform(data['Summary and Review'])
+#     return text_t
+
+
+# def bow_stem_filter_freq(data, token):
+#     data = filter(data)
+#     data = stemmer(data)
+#     return bow_freq(data, None)
+
+
 def bow_freq(data, token):
     positive = readwords('positive-words.txt')
     negative = readwords('negative-words.txt')
@@ -172,3 +186,7 @@ def bow_freq(data, token):
         simple.append([tP, tN, l])
     
     return simple
+
+
+##############SAMPLE-RUN############
+# data = pd.read_csv('merged.csv', index_col=0)

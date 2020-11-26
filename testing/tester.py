@@ -24,16 +24,25 @@ import classifiers
 token = RegexpTokenizer(r'[a-zA-Z0-9]+')
 
 classifers = [
-    ((SVC()),0,'SVM'),
-    (MultinomialNB(), 0, 'MultinomialNB')
+    (LogisticRegression(max_iter=1000, random_state=1),0,'Logistic Regression'), 
+    (MultinomialNB(), 0, 'MultinomialNB'),
+    ((LinearSVC(random_state=1)),0,'Linear SVM')
 ]
-
+"""
+    , 
+    (MultinomialNB(random_state=1), 0, 'MultinomialNB'),
+    ((LinearSVC(random_state=1)),0,'Linear SVM')
+"""
 
 variationOptions = {
     0 : variations.tfidf,
     1 : variations.bow,
-    2 : variations.bow_filter
-
+    2 : variations.bow_filter,
+    3 : variations.bow_stem,
+    4 : variations.tfidf_filter,
+    5 : variations.tfidf_stem,
+    6 : variations.bow_stem_filter,
+    7 : variations.tfidf_stem_filter
 }
 
 classiferOptions = {
@@ -42,8 +51,9 @@ classiferOptions = {
 }
 
 def testClassifers(data, vOption=3):
-    text_t = variationOptions[vOption](data, token.tokenize) # Vectorizes data based on a variation option
-    X_train, X_test, y_train, y_test = train_test_split(text_t, data['Rating'], test_size=0.2, random_state=1) # Note test is never used!!
+    dataCopy = data.copy()
+    text_t = variationOptions[vOption](dataCopy, token.tokenize) # Vectorizes data based on a variation option
+    X_train, X_test, y_train, y_test = train_test_split(text_t, dataCopy['Rating'], test_size=0.2, random_state=1) # Note test is never used!!
     X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1)
 
     print(str(variationOptions[vOption]))
@@ -57,4 +67,4 @@ def testClassifers(data, vOption=3):
 
 if __name__ == "__main__":
     data = pd.read_csv('merged.csv')
-    testClassifers(data, vOption=1) 
+    testClassifers(data, vOption=7) 
