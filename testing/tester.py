@@ -24,9 +24,7 @@ import classifiers
 token = RegexpTokenizer(r'[a-zA-Z0-9]+')
 
 classifers = [
-    (LogisticRegression(max_iter=1000, random_state=1),0,'Logistic Regression'), 
-    (MultinomialNB(), 0, 'MultinomialNB'),
-    ((LinearSVC(random_state=1)),0,'Linear SVM')
+    (LogisticRegression(max_iter=1000, random_state=1),0,'Logistic Regression')
 ]
 """
     , 
@@ -49,6 +47,8 @@ classiferOptions = {
     0 : classifiers.defaultFit,
     1 : classifiers.denseFit
 }
+def getMislabelled(predicted, y_val):
+    return [i for i in range(y_val) if predicted[i] != y_val[i]] # Indices of mislabelled samples
 
 def testClassifers(data, vOption=3):
     dataCopy = data.copy()
@@ -63,8 +63,9 @@ def testClassifers(data, vOption=3):
         
         print(str(name+': {:04.2f}'.format(accuracy_score*100))+'%\n')
         print(metrics.confusion_matrix(y_val, predicted))
+        mislabelled = getMislabelled(y_val, predicted)
         print('\n\n')
 
 if __name__ == "__main__":
     data = pd.read_csv('merged.csv')
-    testClassifers(data, vOption=7) 
+    testClassifers(data, vOption=0) 
