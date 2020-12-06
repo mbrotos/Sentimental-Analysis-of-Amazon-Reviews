@@ -12,10 +12,10 @@ import matplotlib.pyplot as plt
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem.porter import PorterStemmer
 from nltk.sentiment.util import mark_negation
-
 """
 Helper Methods
 """
+
 
 def readwords(filename):
     f = open(filename, encoding="ISO-8859-1")
@@ -75,9 +75,9 @@ def stemData(data):
 
 
 def writeToFile(name, data):
-    # file1 = open(name, "w")
-    # file1.write(','.join(data))
-    # file1.close()
+    file1 = open(name, "w")
+    file1.write(','.join(data))
+    file1.close()
 """
 Variations
 """
