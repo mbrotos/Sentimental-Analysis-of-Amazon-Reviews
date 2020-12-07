@@ -19,7 +19,7 @@ We classified Amazon reviews with a positive or negative sentiment, exclusively.
 ### Models
 
 Following are the classification models that were used
-in this report:<br/><br/><br/>
+in this report:<br/><br/>
     1) Logistic Regression: Baseline version with max
     iterations set in range 1000-10000 in order for model
     to converge.<br/>
