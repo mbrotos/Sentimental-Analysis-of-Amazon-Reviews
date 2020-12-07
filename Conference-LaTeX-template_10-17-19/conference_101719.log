@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.12.5)  5 DEC 2020 23:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.12.5)  6 DEC 2020 21:58
 entering extended mode
 **./conference_101719.tex
 (conference_101719.tex
@@ -22,18 +22,13 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 -- Using 8.5in x 11in (letter) paper.
 -- Using PDF output.
 \@IEEEnormalsizeunitybaselineskip=\dimen141
--- This is a 10 point document.
+-- This is an 11 point document.
 \CLASSINFOnormalsizebaselineskip=\dimen142
 \CLASSINFOnormalsizeunitybaselineskip=\dimen143
 \IEEEnormaljot=\dimen144
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
@@ -276,6 +271,9 @@ LaTeX Warning: Label `fig' multiply defined.
 
 LaTeX Warning: Label `fig' multiply defined.
 
+
+LaTeX Warning: Label `fig' multiply defined.
+
 )
 \openout1 = `conference_101719.aux'.
 
@@ -294,7 +292,7 @@ LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 
--- Lines per column: 56 (exact).
+-- Lines per column: 50 (exact).
 
 (C:\Users\Adam\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
@@ -360,58 +358,79 @@ G,.JBIG2,.JB2,.eps]
 File: flowchart.png Graphic file (type png)
 <use flowchart.png>
 Package pdftex.def Info: flowchart.png  used on input line 76.
-(pdftex.def)             Requested size: 201.59747pt x 170.71156pt.
- [2 <./flowchart.png>]
-<test-prediction-main.png, id=15, 402.00188pt x 219.82124pt>
+(pdftex.def)             Requested size: 251.9936pt x 199.1635pt.
+ [2 <./flowchart.png>] [3]
+<test-prediction-main.png, id=18, 402.00188pt x 219.82124pt>
 File: test-prediction-main.png Graphic file (type png)
 <use test-prediction-main.png>
-Package pdftex.def Info: test-prediction-main.png  used on input line 131.
+Package pdftex.def Info: test-prediction-main.png  used on input line 133.
 (pdftex.def)             Requested size: 226.7941pt x 113.80792pt.
-<precision-recall.png, id=16, 473.51906pt x 310.91156pt>
+<precision-recall.png, id=19, 473.51906pt x 310.91156pt>
 File: precision-recall.png Graphic file (type png)
 <use precision-recall.png>
-Package pdftex.def Info: precision-recall.png  used on input line 137.
+Package pdftex.def Info: precision-recall.png  used on input line 139.
 (pdftex.def)             Requested size: 226.79846pt x 148.91324pt.
-<descision-tree-predition.png, id=17, 320.69812pt x 176.91093pt>
+<descision-tree-predition.png, id=20, 320.69812pt x 176.91093pt>
 File: descision-tree-predition.png Graphic file (type png)
 <use descision-tree-predition.png>
-Package pdftex.def Info: descision-tree-predition.png  used on input line 146.
+Package pdftex.def Info: descision-tree-predition.png  used on input line 148.
 (pdftex.def)             Requested size: 226.79846pt x 125.11363pt.
-<knn-prediction.png, id=18, 264.23718pt x 177.66376pt>
+<knn-prediction.png, id=21, 264.23718pt x 177.66376pt>
 File: knn-prediction.png Graphic file (type png)
 <use knn-prediction.png>
-Package pdftex.def Info: knn-prediction.png  used on input line 152.
+Package pdftex.def Info: knn-prediction.png  used on input line 154.
 (pdftex.def)             Requested size: 226.79846pt x 152.49236pt.
- [3 <./test-prediction-main.png> <./precision-recall.png>]
-<one-five-predictions.png, id=24, 349.305pt x 133.24782pt>
+<one-five-predictions.png, id=22, 349.305pt x 133.24782pt>
 File: one-five-predictions.png Graphic file (type png)
 <use one-five-predictions.png>
-Package pdftex.def Info: one-five-predictions.png  used on input line 162.
-(pdftex.def)             Requested size: 226.79846pt x 86.51651pt.
-<word-cloud.png, id=25, 910.40125pt x 461.725pt>
+Package pdftex.def Info: one-five-predictions.png  used on input line 165.
+(pdftex.def)             Requested size: 252.00041pt x 113.8142pt.
+ [4 <./test-prediction-main.png> <./precision-recall.png> <./descision-tree-pre
+dition.png> <./knn-prediction.png>]
+<word-cloud.png, id=30, 910.40125pt x 461.725pt>
 File: word-cloud.png Graphic file (type png)
 <use word-cloud.png>
-Package pdftex.def Info: word-cloud.png  used on input line 171.
-(pdftex.def)             Requested size: 226.79846pt x 115.02234pt.
-<pca.png, id=26, 540.51938pt x 327.2225pt>
+Package pdftex.def Info: word-cloud.png  used on input line 174.
+(pdftex.def)             Requested size: 251.99338pt x 170.7158pt.
+<pca.png, id=31, 540.51938pt x 327.2225pt>
 File: pca.png Graphic file (type png)
 <use pca.png>
-Package pdftex.def Info: pca.png  used on input line 180.
-(pdftex.def)             Requested size: 226.79846pt x 137.2977pt.
- [4 <./descision-tree-predition.png> <./knn-prediction.png> <./one-five-predict
-ions.png> <./word-cloud.png> <./pca.png>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 199
+Package pdftex.def Info: pca.png  used on input line 183.
+(pdftex.def)             Requested size: 252.0pt x 152.55632pt.
+
+Underfull \hbox (badness 1527) in paragraph at lines 184--184
+\OT1/ptm/m/n/9 Fig. 8.  2-Dimensional prin-ci-pal com-po-nent anal-y-sis Filter
+ed-
+ []
+
+<3d-pca.png, id=32, 586.19pt x 438.63875pt>
+File: 3d-pca.png Graphic file (type png)
+<use 3d-pca.png>
+Package pdftex.def Info: 3d-pca.png  used on input line 188.
+(pdftex.def)             Requested size: 252.0pt x 188.56412pt.
+
+Underfull \hbox (badness 1527) in paragraph at lines 189--189
+\OT1/ptm/m/n/9 Fig. 9.  3-Dimensional prin-ci-pal com-po-nent anal-y-sis Filter
+ed-
+ []
+
+[5 <./one-five-predictions.png> <./word-cloud.png> <./pca.png> <./3d-pca.png>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 205
 .
 
 (C:\Users\Adam\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 199
+LaTeX Font Info:    Trying to load font information for U+msb on input line 205
 .
 
 (C:\Users\Adam\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Underfull \hbox (badness 1748) in paragraph at lines 212--213
+[]\OT1/ptm/m/n/9 J. Re-back, W. McK-in-ney, Jbrock-mendel, et al. \pandas-
+ []
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -423,31 +442,27 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5
-
-] (conference_101719.aux)
+[6] (conference_101719.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4507 strings out of 479799
- 68151 string characters out of 2870198
- 354931 words of memory out of 3000000
- 21426 multiletter control sequences out of 15000+200000
- 568200 words of font info for 92 fonts, out of 3000000 for 9000
+ 4515 strings out of 479799
+ 68428 string characters out of 2870198
+ 354963 words of memory out of 3000000
+ 21432 multiletter control sequences out of 15000+200000
+ 567680 words of font info for 90 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,8n,76p,1367b,361s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 70i,8n,76p,1373b,361s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Adam/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/
-Users/Adam/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.p
-fb><C:/Users/Adam/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pf
-b><C:/Users/Adam/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pf
-b><C:/Users/Adam/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb
-><C:/Users/Adam/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on conference_101719.pdf (5 pages, 707559 bytes).
+Users/Adam/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/U
+sers/Adam/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/U
+sers/Adam/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Us
+ers/Adam/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on conference_101719.pdf (6 pages, 995755 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
+ 57 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
