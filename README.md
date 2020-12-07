@@ -21,7 +21,7 @@
 
 ## Getting Started
 
-### Replicating Results:
+### Replicating Results
 
 See reference [7] for the orginals dataset. Then,
 
@@ -34,7 +34,7 @@ See reference [7] for the orginals dataset. Then,
 **Please note results may vary as a result of the random sampling done in Creating_Main_Dataset.ipynb.
 
 
-### Files:
+### Files
 Creating_Main_Dataset.ipynb - Randomly samples orginial dataset<br/>
 OneFiveStar.ipynb - Post-processing on 1 and 5 star reviews only<br/>
 OneTwoFourFive.ipynb - Post-processing ommiting 3 star reviews<br/>
