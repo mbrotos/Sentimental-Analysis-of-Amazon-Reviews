@@ -4,9 +4,9 @@
 
 ## Authors
 
-[Adam Sorrenti](https://github.com/mbrotos)
-[Sagar Punn](https://github.com/singh13sagar)
-[Eisa Keramatinejad](https://github.com/eisakeramati)
+[Adam Sorrenti](https://github.com/mbrotos)<br/>
+[Sagar Punn](https://github.com/singh13sagar)<br/>
+[Eisa Keramatinejad](https://github.com/eisakeramati)<br/>
 
 ## Description
 
