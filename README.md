@@ -1,5 +1,11 @@
 # Sentimental Analysis of Amazon Reviews
 
+## Authors
+
+[Adam Sorrenti](https://github.com/mbrotos)<br/>
+[Sagar Punn](https://github.com/singh13sagar)<br/>
+[Eisa Keramatinejad](https://github.com/eisakeramati)<br/>
+
 ## Getting Started
 
 ### Replicating Results:
@@ -9,29 +15,32 @@ See reference [7] for the orginals dataset. Then,
 1) Download the the categories as defined in Creating_Main_Dataset.ipynb
 2) Run Creating_Main_Dataset.ipynb
 3) Run each desired dataset variaton on the generated data with the 'others' files as described below.
-4) Run visuals__plots.ipynb to generate PCA and word cloud
-5) Run
+4) Run visuals__plots.ipynb to generate PCA and word cloud.
+5) Run OneFiveStar.ipynb and OneTwoFourFive.ipynb to generate post-processing results.
 
-* Please note results may vary as a result of the random sampling done in Creating_Main_Dataset.ipynb.
+**Please note results may vary as a result of the random sampling done in Creating_Main_Dataset.ipynb.
 
 
 ### Files:
-Creating_Main_Dataset.ipynb - <br/>
-getAllData.py - <br/>
-negative-word.txt - <br/>
-positive-word.txt - <br/>
-visuals__plots.ipynb - <br/>
+Creating_Main_Dataset.ipynb - Randomly samples orginial dataset<br/>
+OneFiveStar.ipynb - Post-processing on 1 and 5 star reviews only<br/>
+OneTwoFourFive.ipynb - Post-processing ommiting 3 star reviews<br/>
+getAllData.py - Feature selection implementations and helper funcitons<br/>
+negative-word.txt - Negative word lexicon<br/>
+positive-word.txt - Positive word lexicon<br/>
+visuals__plots.ipynb - PCA and word cloud visualizations<br/>
 others - All other files contain specific dataset variations and feature selections techniques that can be run individually.<br/>
-
-## Authors
-
-[Adam Sorrenti](https://github.com/mbrotos)<br/>
-[Sagar Punn](https://github.com/singh13sagar)<br/>
-[Eisa Keramatinejad](https://github.com/eisakeramati)<br/>
 
 ## Description
 
 We classified Amazon reviews with a positive or negative sentiment, exclusively. For example, given the following review: ’Super comfortable and extremely lightweight. Great for crossfit!’ Using machine learning and natural language processing is a must to identify whether the review implies a positive or negative sentiment.
+
+### Key Results
+
+![WordCloud](/images/cloud.png)
+![test](/images/cloud.png)
+![pca](/images/cloud.png)
+![post](/images/cloud.png)
 
 ## Methods and Models
 
