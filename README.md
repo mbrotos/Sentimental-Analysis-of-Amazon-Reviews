@@ -56,7 +56,7 @@ in this report:<br/><br/>
 
 ## References
 
-<code>
+<pre>
 [1] Amueller, “amueller/wordcloud,” GitHub. [Online]. Available:
 https://github.com/amueller/word cloud.
 [2] A. Sorrenti, E. Keramatinejad, and S. Punn, “Sentimental Analysis of Amazon Reviews,” 2020. [Online]. Available: https:
@@ -81,4 +81,4 @@ format for reproducible computational workflows. In F. Loizides
 & B. Schmidt, eds. Positioning and Power in Academic Publishing: Players, Agents and Agendas. pp. 87–90.
 [11] Rathor, A. S., Agarwal, A., & Dimri, P. ”Comparative Study of
 Machine Learning Approaches for Amazon Reviews.” 2018.
-</code>
+</pre>
