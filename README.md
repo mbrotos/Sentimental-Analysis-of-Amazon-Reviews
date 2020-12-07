@@ -1,5 +1,18 @@
 # Sentimental Analysis of Amazon Reviews
 
+- [Sentimental Analysis of Amazon Reviews](#sentimental-analysis-of-amazon-reviews)
+  * [Authors](#authors)
+  * [Getting Started](#getting-started)
+    + [Replicating Results:](#replicating-results-)
+    + [Files:](#files-)
+  * [Description](#description)
+    + [Visualizations](#visualizations)
+  * [Methods and Models](#methods-and-models)
+    + [Models](#models)
+  * [Variations](#variations)
+  * [Key Results](#key-results)
+  * [References](#references)
+
 ## Authors
 
 [Adam Sorrenti](https://github.com/mbrotos)<br/>
