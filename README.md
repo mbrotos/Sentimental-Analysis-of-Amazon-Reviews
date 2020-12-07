@@ -33,7 +33,6 @@ See reference [7] for the orginals dataset. Then,
 
 **Please note results may vary as a result of the random sampling done in Creating_Main_Dataset.ipynb.
 
-
 ### Files
 Creating_Main_Dataset.ipynb - Randomly samples orginial dataset<br/>
 OneFiveStar.ipynb - Post-processing on 1 and 5 star reviews only<br/>
@@ -53,6 +52,7 @@ We classified Amazon reviews with a positive or negative sentiment, exclusively.
 
 ![WordCloud](/images/word-cloud.png)
 ![pca](/images/3d-pca.png)
+
 
 
 ## Methods and Models
