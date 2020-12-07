@@ -28,6 +28,7 @@ OneTwoFourFive.ipynb - Post-processing ommiting 3 star reviews<br/>
 getAllData.py - Feature selection implementations and helper funcitons<br/>
 negative-word.txt - Negative word lexicon<br/>
 positive-word.txt - Positive word lexicon<br/>
+Sentimental_Analysis_Report.pdf - Final IEEE conference paper<br/>
 visuals__plots.ipynb - PCA and word cloud visualizations<br/>
 others - All other files contain specific dataset variations and feature selections techniques that can be run individually.<br/>
 
