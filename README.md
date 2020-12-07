@@ -53,10 +53,12 @@ in this report:<br/><br/>
 
 ![Variations](/images/variations.png)
 
-1) Regular: This is untouched review without any filtering applied. \
-2) Stemmed: In this case, Porter Stemmer is used to stemming the original review text where stemmer removes morphological affixes from words, leaving only the word stem. \
-3) Filtered: Each review is filtered to only contain positive and negative words using an opinion lexicon list [3]. Before employing the filtering process, reviews are passed through the Mark Negation method [4] which appends NEG on words between negation and punctuation mark. Furthermore, all words with NEG are considered as one single word in order to reduce noise. This process significantly reduced the number of features and BOW and TFIDF are applied at the end. \
-4) Filtered Stemmed: Here, reviews are filtered (as explained above) first and then stemmed. Finally, BOW and TFIDF are applied. \
+1) Regular: This is untouched review without any filtering applied. 
+2) Stemmed: In this case, Porter Stemmer is used to stemming the original review text where stemmer removes morphological affixes from words, leaving only the word stem. 
+3) Filtered: Each review is filtered to only contain positive and negative words using an opinion lexicon list [3]. Before employing the filtering process, reviews are passed through the Mark Negation method [4] which appends NEG on words between negation and punctuation mark. Furthermore, all words with NEG are considered as one single word in order to reduce noise. This process significantly reduced the number of features and BOW and TFIDF are applied at the end. 
+4) Filtered Stemmed: Here, reviews are filtered (as explained above) first and then stemmed. Finally, BOW and TFIDF are applied. 
+
+
 ## References
 
 
