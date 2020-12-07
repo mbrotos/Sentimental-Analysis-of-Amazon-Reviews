@@ -14,12 +14,12 @@ We classified Amazon reviews with a positive or negative sentiment, exclusively.
 
 ## Methods and Models
 
-![Process](/process.png)
+![Process](/images/process.png)
 
 ### Models
 
 Following are the classification models that were used
-in this report:<br/>
+in this report:<br/><br/><br/>
     1) Logistic Regression: Baseline version with max
     iterations set in range 1000-10000 in order for model
     to converge.<br/>
@@ -34,3 +34,7 @@ in this report:<br/>
     5) Decision Trees: First baseline version is employed
     after which criterion of split is set to entropy with depth
     of tree being 3.<br/>
+
+## Variations
+
+![Variations](/images/variations.png)
