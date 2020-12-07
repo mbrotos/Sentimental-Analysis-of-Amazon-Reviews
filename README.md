@@ -38,8 +38,8 @@ We classified Amazon reviews with a positive or negative sentiment, exclusively.
 
 ### Visualizations
 
-![WordCloud](/images/word-cloud.png){:class="img-responsive"}
-![pca](/images/3d-pca.png){:class="img-responsive"}
+![WordCloud](/images/word-cloud.png)
+![pca](/images/3d-pca.png)
 
 
 ## Methods and Models
