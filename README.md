@@ -2,13 +2,20 @@
 
 ## Getting Started
 
-Replicating Results:<br/><br/>
+### Replicating Results:
+
+See reference [7] for the orginals dataset. Then,
+
+1) Download the the categories as defined in Creating_Main_Dataset.ipynb
+2) Run Creating_Main_Dataset.ipynb
+3) Run each desired dataset variaton on the generated data with the 'others' files as described below.
+4) Run visuals__plots.ipynb to generate PCA and word cloud
+5) Run
+
+* Please note results may vary as a result of the random sampling done in Creating_Main_Dataset.ipynb.
 
 
-
-
-Files:
-<br/><br/>
+### Files:
 Creating_Main_Dataset.ipynb - <br/>
 getAllData.py - <br/>
 negative-word.txt - <br/>
