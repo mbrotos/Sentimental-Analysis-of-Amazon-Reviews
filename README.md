@@ -36,12 +36,11 @@ others - All other files contain specific dataset variations and feature selecti
 
 We classified Amazon reviews with a positive or negative sentiment, exclusively. For example, given the following review: ’Super comfortable and extremely lightweight. Great for crossfit!’ Using machine learning and natural language processing is a must to identify whether the review implies a positive or negative sentiment.
 
-### Key Results
+### Visualizations
 
 ![WordCloud](/Report/word-cloud.png)
-![test](/Report/test-prediction-main.png)
 ![pca](/Report/3d-pca.png)
-![post](/Report/one-five-predictions.png)
+
 
 ## Methods and Models
 
@@ -66,6 +65,10 @@ in this report:<br/><br/>
 3) Filtered: Each review is filtered to only contain positive and negative words using an opinion lexicon list [3]. Before employing the filtering process, reviews are passed through the Mark Negation method [4] which appends NEG on words between negation and punctuation mark. Furthermore, all words with NEG are considered as one single word in order to reduce noise. This process significantly reduced the number of features and BOW and TFIDF are applied at the end. 
 4) Filtered Stemmed: Here, reviews are filtered (as explained above) first and then stemmed. Finally, BOW and TFIDF are applied. 
 
+## Key Results
+
+![test](/Report/test-prediction-main.png)
+![post](/Report/one-five-predictions.png)
 
 ## References
 
